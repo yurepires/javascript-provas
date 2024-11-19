@@ -1,0 +1,12 @@
+{
+  "name": "prova1",
+  "version": "1.0.0",
+  "description": "",
+  "main": "cesar.js",
+  "type": "module",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Yure Pires",
+  "license": "ISC"
+}
