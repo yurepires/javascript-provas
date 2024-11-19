@@ -1,10 +1,10 @@
 function criptografia(mensagem, chave, converter){
-    let mensagemCriptografada = []
+    let mensagemCriptografada = ""
     for(let i = 0; i < mensagem.length; i++){
         if(mensagem[i] != " "){
-            mensagemCriptografada[i] = converter(mensagem[i], chave)
+            mensagemCriptografada += converter(mensagem[i], chave)
         }else{
-            mensagemCriptografada[i] = " "
+            mensagemCriptografada += " "
         }
     }
     return mensagemCriptografada
@@ -29,11 +29,11 @@ function decifraLetra(letra, chave){
     let alfabeto = ["a", "b", "c", "d", "e", "f", "g", "h", "i", "j", "k", "l", "m", "n", "o", "p", "q", "r", "s", "t", "u", "v", "w", "x", "y", "z"]
     for(let i=0; i < alfabeto.length; i++){
         if(letra===alfabeto[i]){
-            if(i + chave < alfabeto.length){
+            if(i - chave >= 0){
                 let letraDescriptografada = alfabeto[i - chave]
                 return letraDescriptografada
             }else{
-                let letraDescriptografada = alfabeto[alfabeto.length - (i + chave)]
+                let letraDescriptografada = alfabeto[alfabeto.length - (chave - i)]
                 return letraDescriptografada
             }
         }
